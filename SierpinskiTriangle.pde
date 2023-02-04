@@ -14,13 +14,11 @@ public void draw()
   background(0);
   sierpinski(x, y, hi);
 }
-public void mouseWheel(MouseEvent event)//optional
+public void keyPressed()//optional
 {
-  float hello = event.getCount();
-
-  if (hello == -1.0)
+  if(key == 'w')
     hi +=25;
-  if (hello == 1.0)
+  if (key == 's')
     hi = hi - 25;
 
   if (hi<=0)
